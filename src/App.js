@@ -4,6 +4,9 @@ import './App.css';
 import Header from './components/Header/Header';
 import { useTelegram } from './components/hooks/useTelegram';
 import Button from './components/Button/Button';
+import {Route, Routes} from 'react-router-dom'
+import ProductList from './components/ProductList/ProductList';
+import Form from './components/Form/Form';
 
 
 
@@ -15,15 +18,14 @@ function App() {
     tg.ready();
   }, [])
 
-  console.log(window.Telegram.WebApp)
-
-
-
-
+ 
   return (
     <div className="App">
       <Header />
-      <Button onClick={onToggleButton}>toggle</Button>
+      <Routes >
+        <Route index element={<ProductList />}/>
+        <Route path={'form'} element={<Form />}/>
+      </Routes>
     </div>
   );
 }

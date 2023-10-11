@@ -11,12 +11,15 @@ width: 100%;
 background-color: antiquewhite;
 height:100px;
 margin: 0 auto;
+margin-bottom: 10px;
 }
 
 .description {
     font-size: 0.8em;
+    margin: 7px 0px;
 }
 
 .add-btn {
     width: 100%;
+    margin-top: 10px;
 }
